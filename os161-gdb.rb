@@ -7,7 +7,6 @@ class Os161Gdb < Formula
 
   depends_on "pkg-config" => :build
   depends_on "readline"
-  depends_on "python@2"
 
   patch do
     url "https://raw.githubusercontent.com/jasonbcodd/os161-homebrew/main/patches/gdb.patch"
@@ -20,7 +19,7 @@ class Os161Gdb < Formula
       "--with-gdb-datadir=#{share}/mips-harvard-os161-gdb",
       "--disable-debug",
       "--disable-dependency-tracking",
-      "--with-python=#{Formula["python@2"].opt_prefix}",
+      "--with-python=no",
       "--without-lzma",
       "--target=mips-harvard-os161",
     ]
