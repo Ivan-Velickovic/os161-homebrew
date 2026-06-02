@@ -1,6 +1,8 @@
 class Os161Toolchain < Formula
     homepage "https://github.com/Ivan-Velickovic/os161-homebrew"
     url "https://github.com/Ivan-Velickovic/os161-homebrew"
+    version "2026t2"
+    revision 3
 
     depends_on "os161-binutils"
     depends_on "os161-gcc"
