@@ -10,6 +10,7 @@ class Os161Gcc < Formula
   depends_on "libmpc"
   depends_on "mpfr"
   depends_on "cloog@018"
+  depends_on "gawk"
   
   patch do
     url "https://raw.githubusercontent.com/jasonbcodd/os161-homebrew/main/patches/gcc.patch"
@@ -37,6 +38,7 @@ class Os161Gcc < Formula
       "--target=mips-harvard-os161",
       "--with-as=#{Formula["os161-binutils"].bin}/mips-harvard-os161-as",
       "--with-ld=#{Formula["os161-binutils"].bin}/mips-harvard-os161-ld",
+      "--with-awk=#{Formula["gawk"].bin}/gawk",
       "--with-pkgversion=Homebrew OS161 #{name} #{pkg_version} #{build.used_options*" "}".strip,
       "--with-bugurl=https://github.com/benesch/homebrew-os161/issues",
     ]
