@@ -1,6 +1,6 @@
 class Os161Gcc < Formula
   homepage "http://os161.eecs.harvard.edu/"
-  url "http://os161.eecs.harvard.edu/download/gcc-4.8.3+os161-2.1.tar.gz"
+  url "http://www.cse.unsw.edu.au/~cs3231/os161-files/gcc-4.8.3+os161-2.1.tar.gz"
   version "4.8.3-os161-2.1"
   sha256 "070659d14ab6f905e9df89891b78f9e052c114e0c4d011c630b2f07788d0359e"
   revision 3
