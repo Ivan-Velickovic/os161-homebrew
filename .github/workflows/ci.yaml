@@ -7,7 +7,7 @@ on:
 
 jobs:
   build_macos_26:
-    name: Homebrew install
+    name: macOS 26 homebrew test
     runs-on: macos-26
     steps:
       - name: Checkout repository
@@ -20,7 +20,7 @@ jobs:
         run: brew install bmake os161-binutils os161-gcc os161-gdb sys161
 
   build_macos_latest:
-    name: Homebrew install
+    name: macOS 'latest' homebrew test
     runs-on: macos-latest
     steps:
       - name: Checkout repository
