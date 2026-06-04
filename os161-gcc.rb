@@ -53,7 +53,7 @@ class Os161Gcc < Formula
 
       resources.each { |r| r.stage(buildpath/r.name) }
 
-      system "../configure", *args
+      system "CXXFLAGS --std=c++03 ../configure", *args
       system "make", "-j8"
       system "make", "install"
     end
