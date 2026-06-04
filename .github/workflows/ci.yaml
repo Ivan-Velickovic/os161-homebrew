@@ -6,7 +6,20 @@ on:
     branches: [ "main" ]
 
 jobs:
-  build_macos:
+  build_macos_26:
+    name: Homebrew install
+    runs-on: macos-26
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      - name: uname
+        run: uname -a
+      - name: Tap
+        run: brew tap Ivan-Velickovic/os161-homebrew https://github.com/Ivan-Velickovic/os161-homebrew
+      - name: Install OS/161 toolchain
+        run: brew install bmake os161-binutils os161-gcc os161-gdb sys161
+
+  build_macos_latest:
     name: Homebrew install
     runs-on: macos-latest
     steps:
